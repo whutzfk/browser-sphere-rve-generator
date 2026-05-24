@@ -1,0 +1,12 @@
+{
+  "name": "browser-sphere-rve-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser-based Sphere RVE generator suite with 2D and 3D standalone tools.",
+  "scripts": {
+    "dev": "node tools/dev-server.js",
+    "dev:2d": "cd browser-sphere-2d-rve-generator && node tools/dev-server.js",
+    "dev:3d": "cd browser-sphere-3d-rve-generator && node tools/dev-server.js"
+  },
+  "devDependencies": {}
+}

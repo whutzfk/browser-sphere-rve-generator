@@ -1,0 +1,10 @@
+{
+  "name": "browser-sphere-2d-rve-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser-based generator for circle-clipped 2D Sphere RVE SVG and PNG images.",
+  "scripts": {
+    "dev": "node tools/dev-server.js"
+  },
+  "devDependencies": {}
+}

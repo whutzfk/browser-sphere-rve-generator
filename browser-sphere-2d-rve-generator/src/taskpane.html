@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sphere 2D RVE Generator</title>
+    <link rel="icon" href="../assets/icon-32.png" />
+    <script src="https://cdn.jsdelivr.net/npm/d3-delaunay@6/dist/d3-delaunay.min.js"></script>
+    <link rel="stylesheet" href="./taskpane.css?v=graph-boundary-null-20260515" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="controls">
+        <label>
+          <span>RVE宽度 (um)</span>
+          <input id="width" type="number" min="1" step="1" value="100" />
+        </label>
+        <label>
+          <span>RVE高度 (um)</span>
+          <input id="height" type="number" min="1" step="1" value="100" />
+        </label>
+        <label>
+          <span>泡孔数量</span>
+          <input id="cellCount" type="number" min="3" max="2000" step="1" value="80" />
+        </label>
+        <label>
+          <span>泡孔直径 (um)</span>
+          <input id="poreDiameter" type="number" min="0.1" step="0.1" value="18" />
+        </label>
+        <label>
+          <span>壁厚 (um)</span>
+          <input id="wallThickness" type="number" min="0" step="0.1" value="1.5" />
+        </label>
+        <label>
+          <span>结构均匀度</span>
+          <select id="uniformity">
+            <option value="random" selected>随机</option>
+            <option value="uniform">均匀</option>
+            <option value="clustered">不均匀</option>
+          </select>
+        </label>
+        <label>
+          <span>目标变异系数</span>
+          <input id="targetCv" type="number" min="0.05" max="1.5" step="0.01" value="0.60" />
+        </label>
+        <label>
+          <span>团聚区数量</span>
+          <input id="clusterCount" type="number" min="0" max="50" step="1" value="5" />
+        </label>
+        <label>
+          <span>每个团聚区泡孔数</span>
+          <input id="poresPerCluster" type="number" min="1" max="500" step="1" value="10" />
+        </label>
+        <label>
+          <span>团聚区目标变异系数</span>
+          <input id="clusterCv" type="number" min="0.05" max="1.5" step="0.01" value="0.85" />
+        </label>
+        <label>
+          <span>随机种子</span>
+          <input id="seed" type="number" step="1" value="42" />
+        </label>
+        <label class="color-field">
+          <span>背景颜色</span>
+          <input id="bgColor" type="color" value="#f8f8f2" />
+        </label>
+        <label class="color-field">
+          <span>胞壁颜色</span>
+          <input id="cellColor" type="color" value="#dfe8e6" />
+        </label>
+        <label class="color-field">
+          <span>胞壁边线</span>
+          <input id="cellStrokeColor" type="color" value="#344850" />
+        </label>
+        <label class="color-field">
+          <span>孔隙颜色</span>
+          <input id="poreColor" type="color" value="#ffffff" />
+        </label>
+        <label class="color-field">
+          <span>孔隙边线</span>
+          <input id="poreStrokeColor" type="color" value="#147a7e" />
+        </label>
+        <label class="color-field">
+          <span>种子点颜色</span>
+          <input id="seedColor" type="color" value="#162326" />
+        </label>
+        <div class="actions">
+          <button id="generate" type="button">生成预览</button>
+          <button id="downloadSvg" type="button">下载SVG</button>
+          <button id="downloadPng" type="button">下载PNG</button>
+          <button id="downloadDxf" type="button">下载DXF</button>
+          <button id="downloadNodes" type="button">下载节点CSV</button>
+          <button id="downloadEdges" type="button">下载连线CSV</button>
+        </div>
+      </section>
+
+      <section class="preview-wrap">
+        <div id="preview" class="preview"></div>
+      </section>
+
+      <section id="metrics" class="metrics"></section>
+    </main>
+    <script src="./taskpane.js?v=graph-boundary-null-20260515"></script>
+  </body>
+</html>
