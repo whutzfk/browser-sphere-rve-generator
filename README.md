@@ -1,5 +1,8 @@
 # Browser Sphere RVE Generator
 
+Live browser version: https://whutzfk.github.io/browser-sphere-rve-generator/
+
+
 Standalone browser generators for sphere-inspired porous RVE models.
 
 This repository packages two browser tools derived from `whutzfk/sphere-2d-rve` and `whutzfk/sphere-3d-rve`:
