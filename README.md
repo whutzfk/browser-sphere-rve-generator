@@ -2,13 +2,13 @@
 
 Open the web tool directly:
 
-**https://whutzfk.github.io/browser-sphere-rve-generator/**
+**https://zfkzxy.github.io/browser-sphere-rve-generator/**
 
 This is the public browser version. Users do **not** need Codex, Git, Node.js, or a local installation to use it.
 
 Standalone browser generators for sphere-inspired porous RVE models.
 
-This repository packages two browser tools derived from `whutzfk/sphere-2d-rve` and `whutzfk/sphere-3d-rve`:
+This repository packages two browser tools derived from `zfkzxy/sphere-2d-rve` and `zfkzxy/sphere-3d-rve`:
 
 - `browser-sphere-2d-rve-generator`: 2D circle-clipped pore RVE generator with SVG, PNG, DXF, and graph CSV exports.
 - `browser-sphere-3d-rve-generator`: 3D sphere-clipped pore RVE generator with WebGL preview plus STL, OBJ, and graph CSV exports.
@@ -18,7 +18,7 @@ This repository packages two browser tools derived from `whutzfk/sphere-2d-rve` 
 - Type: `Browser Tool`
 - Public app: GitHub Pages
 - Codex required: No
-- Related Codex skills: `whutzfk/sphere-2d-rve`, `whutzfk/sphere-3d-rve`
+- Related Codex skills: `zfkzxy/sphere-2d-rve`, `zfkzxy/sphere-3d-rve`
 
 ## Run
 
